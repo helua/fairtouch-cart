@@ -18,6 +18,7 @@ import { useSettings } from "#components/SettingsProvider"
 const Cart: FC = () => {
   const { settings } = useSettings()
   const { t } = useTranslation()
+  console.log(settings);
 
   if (!settings || !settings.isValid) {
     return null
