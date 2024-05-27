@@ -40,7 +40,6 @@ export const ButtonCheckout: FC = () => {
           quantity ? (
             <CheckoutLink
               data-test-id="button-checkout"
-              hostedCheckout={false}
               href={checkoutUrl}
               aria-disabled="false"
               className={
