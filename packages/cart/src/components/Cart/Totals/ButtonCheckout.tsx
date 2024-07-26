@@ -18,11 +18,10 @@ export const ButtonCheckout: FC = () => {
   const label = t("general.gotToCheckoutCta")
   const { order } = useOrderContainer()
   // temporary fix
-  const tokenFromcurrentUrl = window.location.href.split('=')[1];
-  let checkoutUrl: string = "";
+  const tokenFromcurrentUrl = window.location.href.split("=")[1]
+  let checkoutUrl: string = ""
   if (order?.cart_url) {
-    // checkoutUrl = order?.cart_url.replace("cart", "checkout")
-    checkoutUrl = order?.checkout_url + "?accessToken="+tokenFromcurrentUrl
+    checkoutUrl = order?.checkout_url + "?accessToken=" + tokenFromcurrentUrl
   }
   return (
     <>
