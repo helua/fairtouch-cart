@@ -20,8 +20,8 @@ export const ButtonCheckout: FC = () => {
   // temporary fix
   const tokenFromcurrentUrl = window.location.href.split("=")[1]
   let checkoutUrl: string = ""
-  if (order?.cart_url) {
-    checkoutUrl = order?.checkout_url + "?accessToken=" + tokenFromcurrentUrl
+  if (order?.checkout_url) {
+    checkoutUrl = order.checkout_url + "?accessToken=" + tokenFromcurrentUrl
   }
   return (
     <>
